@@ -37,7 +37,7 @@ class MainController extends Controller {
 	{
            $req = $request->all();
 		   #dd($req);
-           $ret = [];
+           $ret = "";
                
                 $validator = Validator::make($req, [
                              'name' => 'required',
