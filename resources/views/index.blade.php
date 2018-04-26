@@ -310,15 +310,15 @@
         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.5s">
           <div class="box-team wow bounceInUp">
             <img src="img/team/3.jpg" alt="" class="img-circle img-responsive" />
-            <h4>Mira Ladovic</h4>
-            <p>Chief Relationship Officer</p>
+            <h4>Annette Williamson</h4>
+            <p>HR Officer</p>
           </div>
         </div>
         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.7s">
           <div class="box-team wow bounceInUp">
             <img src="img/team/4.jpg" alt="" class="img-circle img-responsive" />
             <h4>Brenda Colson</h4>
-            <p>HR Manager</p>
+            <p>HR Officer</p>
           </div>
         </div>
       </div>
@@ -331,16 +331,18 @@
       <div class="row">
         <div class="col-md-offset-2 col-md-8">
           <div class="section-heading">
-            <h2>Contact us</h2>
+            <h2>Partner with us</h2>
             <div class="heading-line"></div>
-            <p>If you have any question or just want to say 'hello' to Expoze web studio please fill out form below and we will be get in touch with you within 24 hours. </p>
+            <p>Do you own a car and live in the US? We would like to use your car space to promote our ads!<br>
+			   Enjoy a whooping <b>$300 per week</b> when you join us today. Submit a request below to see if you qualify NOW:
+			</p>
           </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-offset-2 col-md-8">
-          <div id="sendmessage">Your message has been sent. Thank you!</div>
+          <div id="sendmessage">Your message has been sent. If you qualify one of our HR officers will contact you via email. Thank you!</div>
           <div id="errormessage"></div>
 
           <form action="" method="post" class="form-horizontal contactForm" role="form">
@@ -360,14 +362,7 @@
 
             <div class="col-md-offset-2 col-md-8">
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                <div class="validation"></div>
-              </div>
-            </div>
-
-            <div class="col-md-offset-2 col-md-8">
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <input type="text" class="form-control" name="location" id="location" placeholder="Where are you located? (City and state. US ONLY!)" data-rule="minlen:4" data-msg="Please enter your location (city and state)" />
                 <div class="validation"></div>
               </div>
             </div>
@@ -402,7 +397,7 @@
             <i class="fa fa-phone fa-4x"></i>
             <h5>Call</h5>
             <p>
-              +1 513 279 8245<br> +1 245 4544 6855
+              +1 513 279 8245<br>
 
             </p>
           </div>
@@ -412,7 +407,7 @@
             <i class="fa fa-envelope fa-4x"></i>
             <h5>Email us</h5>
             <p>
-              uwantbrendacolson@gmail.com<br />sales@Expozestudio.com
+              expoze.inc@gmail.com<br />
             </p>
           </div>
         </div>

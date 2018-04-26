@@ -33,9 +33,10 @@ class MainController extends Controller {
    
     
     
-    public function postSneh(Request $request)
+    public function postPartner(Request $request)
 	{
            $req = $request->all();
+		   dd($req);
            $ret = [];
                
                 $validator = Validator::make($req, [

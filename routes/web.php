@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'MainController@getIndex');
+Route::post('partner', 'MainController@postPartner');
