@@ -37,7 +37,7 @@
           <li><a href="#services">Service</a></li>
           <li><a href="#portfolio">Works</a></li>
           <li><a href="#team">Team</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact">Partners</a></li>
         </ul>
       </div>
     </div>
@@ -66,7 +66,7 @@
           <div class="section-heading">
             <h2>About us</h2>
             <div class="heading-line"></div>
-            <p>We’ve been building unique digital products, platforms, and experiences for the past 6 years.</p>
+            <p>We’ve been promoting and campaigning for identities, brands and businesses for the past 6 years.</p>
           </div>
         </div>
       </div>
@@ -76,10 +76,11 @@
         </div>
 
         <div class="col-md-6 content">
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elite storium paralate</h2>
-          <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+          <h2>Do you know that 91% of people notice words and pictures when displayed on cars and trucks?</h2>
+          <h3>Our goal is to become your primary promoter for all of your brands and businesses!</h3>
           <p>
-            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Libero justo laoreet sit amet cursus sit amet dictum sit. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+		   Expoze Inc. is a leading creative media agency that specializes in brand and business promotion by offering high quality, customized business signs, vehicle wraps, and other business promotion products.<br>
+           We work with the newest and best technology to create eye-catching signs that market your business to the public and maintain a professional, cohesive appearance throughout your commercial locations and vehicles.
           </p>
         </div>
       </div>
@@ -108,7 +109,7 @@
           <div class="section-heading">
             <h2>Services</h2>
             <div class="heading-line"></div>
-            <p>We’ve been building unique digital products, platforms, and experiences for the past 6 years.</p>
+            <p>We’ve been promoting unique brands and businesses for the past 6 years.</p>
           </div>
         </div>
       </div>
@@ -122,23 +123,23 @@
                 <div class="row">
                   <div class="col-sm-12 col-md-offset-1 col-md-6">
                     <div class="wow bounceInLeft">
-                      <h4>Website Design</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                      <h4>Brand Identity</h4>
+                      <p>We use the space on our ever-increasing fleet of cars to display eye-catching ads of your brands/businesses.</p>
                     </div>
                   </div>
                   <div class="col-sm-12 col-md-5">
                     <div class="screenshot wow bounceInRight">
-                      <img src="img/screenshots/1.png" class="img-responsive" alt="" />
+                      <img src="img/td/suv.jpg" class="img-responsive" alt="" />
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="item">
+			  <div class="item">
                 <div class="row">
                   <div class="col-sm-12 col-md-offset-1 col-md-6">
                     <div class="wow bounceInLeft">
-                      <h4>Brand Identity</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                      <h4>Aggressive On-line Promotion</h4>
+                      <p>Our team of highly skilled on-line media experts will design compelling on-line campaigns that are delivered right to your target market, making them unable to resist doing business with you.</p>
                     </div>
                   </div>
                   <div class="col-sm-12 col-md-5">
@@ -152,13 +153,15 @@
                 <div class="row">
                   <div class="col-sm-12 col-md-offset-1 col-md-6">
                     <div class="wow bounceInLeft">
-                      <h4>Web & Mobile Apps</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                      <h4>Part-time Partnerships</h4>
+                      <p>We are always looking to increase the number of cars in our fleet! If you own a car and live in the US it would be our pleasure to do business with you!<br>
+					     Click <a href="#contact">here</a> to find out more.
+					  </p>
                     </div>
                   </div>
                   <div class="col-sm-12 col-md-5">
                     <div class="screenshot wow bounceInRight">
-                      <img src="img/screenshots/3.png" class="img-responsive" alt="" />
+                      <img src="img/td/car5.jpg" class="img-responsive" alt="" />
                     </div>
                   </div>
                 </div>
@@ -194,63 +197,63 @@
 
           <ul id="og-grid" class="og-grid">
             <li>
-              <a href="#" data-largesrc="img/works/1.jpg" data-title="Portfolio title" data-description="Duo te dico volutpat, unum elit oblique per id. Ne duo mollis sapientem intellegebat. Per at augue vidisse percipit, pri vocibus assueverit interesset ut, no dolore luptatum incorrupte nec. In mentitum forensibus nec, nibh eripuit ut pri, tale illud voluptatum ut sea. Sed oratio repudiare ei, cum an magna labitur, eu atqui augue mei. Pri consul detracto eu, solet nusquam accusam ex vim, an movet interesset necessitatibus mea.">
-								<img src="img/works/thumbs/1.jpg" alt=""/>
+              <a href="#" data-largesrc="img/td/work1.jpg" data-title="Portfolio title" data-description="Duo te dico volutpat, unum elit oblique per id. Ne duo mollis sapientem intellegebat. Per at augue vidisse percipit, pri vocibus assueverit interesset ut, no dolore luptatum incorrupte nec. In mentitum forensibus nec, nibh eripuit ut pri, tale illud voluptatum ut sea. Sed oratio repudiare ei, cum an magna labitur, eu atqui augue mei. Pri consul detracto eu, solet nusquam accusam ex vim, an movet interesset necessitatibus mea.">
+								<img src="img/td/work1.jpg" alt=""/>
 							</a>
             </li>
             <li>
-              <a href="#" data-largesrc="img/works/2.jpg" data-title="Portfolio title" data-description="Mea an eros periculis dignissim, quo mollis nostrum elaboraret et. Id quem perfecto mel, no etiam perfecto qui. No nisl legere recusabo nam, ius an tale pericula evertitur, dicat phaedrum qui in. Usu numquam legendos in, voluptaria sadipscing ut vel. Eu eum mandamus volutpat gubergren, eos ad detracto nominati, ne eum idque elitr aliquam.">
-								<img src="img/works/thumbs/2.jpg" alt=""/>
+              <a href="#" data-largesrc="img/td/work2.jpg" data-title="Portfolio title" data-description="Mea an eros periculis dignissim, quo mollis nostrum elaboraret et. Id quem perfecto mel, no etiam perfecto qui. No nisl legere recusabo nam, ius an tale pericula evertitur, dicat phaedrum qui in. Usu numquam legendos in, voluptaria sadipscing ut vel. Eu eum mandamus volutpat gubergren, eos ad detracto nominati, ne eum idque elitr aliquam.">
+								<img src="img/td/work2.jpg" alt=""/>
 							</a>
             </li>
             <li>
-              <a href="#" data-largesrc="img/works/3.jpg" data-title="Portfolio title" data-description="Vim ad persecuti appellantur. Eam ignota deterruisset eu, in omnis fierent convenire sed. Ne nulla veritus vel, liber euripidis in eos. Postea comprehensam vis in, detracto deseruisse mei ea. Ex sadipscing deterruisset concludaturque quo.">
-								<img src="img/works/thumbs/3.jpg" alt="img01"/>
+              <a href="#" data-largesrc="img/td/work3.jpg" data-title="Portfolio title" data-description="Vim ad persecuti appellantur. Eam ignota deterruisset eu, in omnis fierent convenire sed. Ne nulla veritus vel, liber euripidis in eos. Postea comprehensam vis in, detracto deseruisse mei ea. Ex sadipscing deterruisset concludaturque quo.">
+								<img src="img/td/work3.jpg" alt="img01"/>
 							</a>
             </li>
             <li>
-              <a href="#" data-largesrc="img/works/4.jpg" data-title="Portfolio title" data-description="In mentitum forensibus nec, nibh eripuit ut pri, tale illud voluptatum ut sea. Sed oratio repudiare ei, cum an magna labitur, eu atqui augue mei. Pri consul detracto eu, solet nusquam accusam ex vim, an movet interesset necessitatibus mea.">
-								<img src="img/works/thumbs/4.jpg" alt="img01"/>
+              <a href="#" data-largesrc="img/td/work4.jpg" data-title="Portfolio title" data-description="In mentitum forensibus nec, nibh eripuit ut pri, tale illud voluptatum ut sea. Sed oratio repudiare ei, cum an magna labitur, eu atqui augue mei. Pri consul detracto eu, solet nusquam accusam ex vim, an movet interesset necessitatibus mea.">
+								<img src="img/td/work4.jpg" alt="img01"/>
 							</a>
             </li>
             <li>
-              <a href="#" data-largesrc="img/works/5.jpg" data-title="Portfolio title" data-description="Duo te dico volutpat, unum elit oblique per id. Ne duo mollis sapientem intellegebat. Per at augue vidisse percipit, pri vocibus assueverit interesset ut, no dolore luptatum incorrupte nec. In mentitum forensibus nec, nibh eripuit ut pri, tale illud voluptatum ut sea">
-								<img src="img/works/thumbs/5.jpg" alt="img01"/>
+              <a href="#" data-largesrc="img/td/work5.jpg" data-title="Portfolio title" data-description="Duo te dico volutpat, unum elit oblique per id. Ne duo mollis sapientem intellegebat. Per at augue vidisse percipit, pri vocibus assueverit interesset ut, no dolore luptatum incorrupte nec. In mentitum forensibus nec, nibh eripuit ut pri, tale illud voluptatum ut sea">
+								<img src="img/td/work5.jpg" alt="img01"/>
 							</a>
             </li>
             <li>
-              <a href="#" data-largesrc="img/works/6.jpg" data-title="Portfolio title" data-description="Id elit saepe pro. In atomorum constituam definitionem quo, at torquatos sadipscing eum, ut eum wisi meis mentitum. Probo feugiat ea duo. An usu platonem instructior, qui dolores inciderint ad. Te elit essent mea, vim ne atqui legimus invenire, ad dolor vitae sea.">
-								<img src="img/works/thumbs/6.jpg" alt="img01"/>
+              <a href="#" data-largesrc="img/td/work6.jpg" data-title="Portfolio title" data-description="Id elit saepe pro. In atomorum constituam definitionem quo, at torquatos sadipscing eum, ut eum wisi meis mentitum. Probo feugiat ea duo. An usu platonem instructior, qui dolores inciderint ad. Te elit essent mea, vim ne atqui legimus invenire, ad dolor vitae sea.">
+								<img src="img/td/work6.jpg" alt="img01"/>
 							</a>
             </li>
             <li>
-              <a href="#" data-largesrc="img/works/7.jpg" data-title="Portfolio title" data-description="Duo te dico volutpat, unum elit oblique per id. Ne duo mollis sapientem intellegebat. Per at augue vidisse percipit, pri vocibus assueverit interesset ut, no dolore luptatum incorrupte nec. In mentitum forensibus nec, nibh eripuit ut pri, tale illud voluptatum ut sea. Sed oratio repudiare ei, cum an magna labitur, eu atqui augue mei.">
-								<img src="img/works/thumbs/7.jpg" alt="img01"/>
+              <a href="#" data-largesrc="img/td/work7.jpg" data-title="Portfolio title" data-description="Duo te dico volutpat, unum elit oblique per id. Ne duo mollis sapientem intellegebat. Per at augue vidisse percipit, pri vocibus assueverit interesset ut, no dolore luptatum incorrupte nec. In mentitum forensibus nec, nibh eripuit ut pri, tale illud voluptatum ut sea. Sed oratio repudiare ei, cum an magna labitur, eu atqui augue mei.">
+								<img src="img/td/work7.jpg" alt="img01"/>
 							</a>
             </li>
             <li>
-              <a href="#" data-largesrc="img/works/8.jpg" data-title="Portfolio title" data-description="No nisl legere recusabo nam, ius an tale pericula evertitur, dicat phaedrum qui in. Usu numquam legendos in, voluptaria sadipscing ut vel. Eu eum mandamus volutpat gubergren, eos ad detracto nominati, ne eum idque elitr aliquam.">
-								<img src="img/works/thumbs/8.jpg" alt="img01"/>
+              <a href="#" data-largesrc="img/td/work8.jpg" data-title="Portfolio title" data-description="No nisl legere recusabo nam, ius an tale pericula evertitur, dicat phaedrum qui in. Usu numquam legendos in, voluptaria sadipscing ut vel. Eu eum mandamus volutpat gubergren, eos ad detracto nominati, ne eum idque elitr aliquam.">
+								<img src="img/td/work8.jpg" alt="img01"/>
 							</a>
             </li>
             <li>
-              <a href="#" data-largesrc="img/works/9.jpg" data-title="Portfolio title" data-description="Lorem ipsum dolor sit amet, ex pri quod ferri fastidii. Mazim philosophia eum ad, facilisis laboramus te est. Eam magna fabellas ut. Ne vis diceret accumsan salutandi, pro in impedit accusamus dissentias, ut nonumy eloquentiam ius.">
-								<img src="img/works/thumbs/9.jpg" alt="img01"/>
+              <a href="#" data-largesrc="img/td/work9.jpg" data-title="Portfolio title" data-description="Lorem ipsum dolor sit amet, ex pri quod ferri fastidii. Mazim philosophia eum ad, facilisis laboramus te est. Eam magna fabellas ut. Ne vis diceret accumsan salutandi, pro in impedit accusamus dissentias, ut nonumy eloquentiam ius.">
+								<img src="img/td/work9.jpg" alt="img01"/>
 							</a>
             </li>
             <li>
-              <a href="#" data-largesrc="img/works/10.jpg" data-title="Portfolio title" data-description="Duo te dico volutpat, unum elit oblique per id. Ne duo mollis sapientem intellegebat. Per at augue vidisse percipit, pri vocibus assueverit interesset ut, no dolore luptatum incorrupte nec. In mentitum forensibus nec, nibh eripuit ut pri, tale illud voluptatum ut sea. Sed oratio repudiare ei, cum an magna labitur, eu atqui augue mei. Pri consul detracto eu, solet nusquam accusam ex vim.">
-								<img src="img/works/thumbs/10.jpg" alt="img01"/>
+              <a href="#" data-largesrc="img/td/work10.jpg" data-title="Portfolio title" data-description="Duo te dico volutpat, unum elit oblique per id. Ne duo mollis sapientem intellegebat. Per at augue vidisse percipit, pri vocibus assueverit interesset ut, no dolore luptatum incorrupte nec. In mentitum forensibus nec, nibh eripuit ut pri, tale illud voluptatum ut sea. Sed oratio repudiare ei, cum an magna labitur, eu atqui augue mei. Pri consul detracto eu, solet nusquam accusam ex vim.">
+								<img src="img/td/work10.jpg" alt="img01"/>
 							</a>
             </li>
             <li>
-              <a href="#" data-largesrc="img/works/11.jpg" data-title="Portfolio title" data-description="Vim ad persecuti appellantur. Eam ignota deterruisset eu, in omnis fierent convenire sed. Ne nulla veritus vel, liber euripidis in eos. Postea comprehensam vis in, detracto deseruisse mei ea. Ex sadipscing deterruisset concludaturque quo.">
-								<img src="img/works/thumbs/11.jpg" alt="img01"/>
+              <a href="#" data-largesrc="img/td/work11.jpg" data-title="Portfolio title" data-description="Vim ad persecuti appellantur. Eam ignota deterruisset eu, in omnis fierent convenire sed. Ne nulla veritus vel, liber euripidis in eos. Postea comprehensam vis in, detracto deseruisse mei ea. Ex sadipscing deterruisset concludaturque quo.">
+								<img src="img/td/work11.jpg" alt="img01"/>
 							</a>
             </li>
             <li>
-              <a href="#" data-largesrc="img/works/12.jpg" data-title="Portfolio title" data-description="Mea an eros periculis dignissim, quo mollis nostrum elaboraret et. Id quem perfecto mel, no etiam perfecto qui. No nisl legere recusabo nam, ius an tale pericula evertitur, dicat phaedrum qui in. Usu numquam legendos in, voluptaria sadipscing ut vel. Eu eum mandamus volutpat gubergren, eos ad detracto nominati, ne eum idque elitr aliquam.">
-								<img src="img/works/thumbs/12.jpg" alt="img01"/>
+              <a href="#" data-largesrc="img/td/work12.jpg" data-title="Portfolio title" data-description="Mea an eros periculis dignissim, quo mollis nostrum elaboraret et. Id quem perfecto mel, no etiam perfecto qui. No nisl legere recusabo nam, ius an tale pericula evertitur, dicat phaedrum qui in. Usu numquam legendos in, voluptaria sadipscing ut vel. Eu eum mandamus volutpat gubergren, eos ad detracto nominati, ne eum idque elitr aliquam.">
+								<img src="img/td/work12.jpg" alt="img01"/>
 							</a>
             </li>
           </ul>
@@ -266,10 +269,11 @@
       <div class="row">
         <div class="col-md-12">
           <ul class="clients">
-            <li class="wow fadeInDown" data-wow-delay="0.3s"><a href="#"><img src="img/clients/1.png" alt="" /></a></li>
+            <li class="wow fadeInDown" data-wow-delay="0.3s"><a href="#"><img src="img/clients/5.png" alt="" /></a></li>
             <li class="wow fadeInDown" data-wow-delay="0.6s"><a href="#"><img src="img/clients/2.png" alt="" /></a></li>
             <li class="wow fadeInDown" data-wow-delay="0.9s"><a href="#"><img src="img/clients/3.png" alt="" /></a></li>
             <li class="wow fadeInDown" data-wow-delay="1.1s"><a href="#"><img src="img/clients/4.png" alt="" /></a></li>
+            <li class="wow fadeInDown" data-wow-delay="1.1s"><a href="#"><img src="img/clients/1.png" alt="" /></a></li>
           </ul>
         </div>
       </div>
@@ -284,7 +288,7 @@
           <div class="section-heading">
             <h2>Our Team</h2>
             <div class="heading-line"></div>
-            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <p>Meet the leaders of our various departments.</p>
           </div>
         </div>
       </div>
@@ -300,21 +304,21 @@
           <div class="box-team wow bounceInUp">
             <img src="img/team/2.jpg" alt="" class="img-circle img-responsive" />
             <h4>Thomas Jeffersonn</h4>
-            <p>Web Designer</p>
+            <p>Managing Director</p>
           </div>
         </div>
         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.5s">
           <div class="box-team wow bounceInUp">
             <img src="img/team/3.jpg" alt="" class="img-circle img-responsive" />
-            <h4>Nola Maurin</h4>
-            <p>Illustrator</p>
+            <h4>Mira Ladovic</h4>
+            <p>Chief Relationship Officer</p>
           </div>
         </div>
         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.7s">
           <div class="box-team wow bounceInUp">
             <img src="img/team/4.jpg" alt="" class="img-circle img-responsive" />
-            <h4>Mira Ladovic</h4>
-            <p>Typographer</p>
+            <h4>Brenda Colson</h4>
+            <p>HR Manager</p>
           </div>
         </div>
       </div>
@@ -398,7 +402,7 @@
             <i class="fa fa-phone fa-4x"></i>
             <h5>Call</h5>
             <p>
-              +1 111 9998 7774<br> +1 245 4544 6855
+              +1 513 279 8245<br> +1 245 4544 6855
 
             </p>
           </div>
@@ -408,7 +412,7 @@
             <i class="fa fa-envelope fa-4x"></i>
             <h5>Email us</h5>
             <p>
-              hello@Expozestudio.com<br />sales@Expozestudio.com
+              uwantbrendacolson@gmail.com<br />sales@Expozestudio.com
             </p>
           </div>
         </div>
@@ -426,19 +430,13 @@
             <li><a href="#">
 						<span class="fa-stack fa-2x">
 							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fa fa-dribbble fa-stack-1x fa-inverse"></i>
-						</span></a>
-            </li>
-            <li><a href="#">
-						<span class="fa-stack fa-2x">
-							<i class="fa fa-circle fa-stack-2x"></i>
 							<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
 						</span></a>
             </li>
             <li><a href="#">
 						<span class="fa-stack fa-2x">
 							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fa fa-pinterest fa-stack-1x fa-inverse"></i>
+							<i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
 						</span></a>
             </li>
           </ul>
@@ -454,13 +452,7 @@
         <div class="col-md-12">
           <p>Copyright &copy; Expoze. All rights reserved.</p>
           <div class="credits">
-            <!--
-              All the links in the footer should remain intact.
-              You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Expoze
-            -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            Designed by <a href="#">Expoze</a>
           </div>
         </div>
       </div>
