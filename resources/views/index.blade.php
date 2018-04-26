@@ -346,6 +346,7 @@
           <div id="errormessage"></div>
 
           <form action="" method="post" class="form-horizontal contactForm" role="form">
+		  {{crsf_field()}}
             <div class="col-md-offset-2 col-md-8">
               <div class="form-group">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
