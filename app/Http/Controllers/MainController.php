@@ -102,7 +102,7 @@ class MainController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function getRansCheck()
+	public function getRansCheck(Request $request)
     {
          $req = $request->all();
 		   #dd($req);
@@ -131,7 +131,7 @@ class MainController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function getRansDelete()
+	public function getRansDelete(Request $request)
     {
          $req = $request->all();
 		   #dd($req);
