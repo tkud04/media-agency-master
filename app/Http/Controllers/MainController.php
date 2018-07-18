@@ -121,7 +121,7 @@ class MainController extends Controller {
                 
                  else
                  { 
-                       $ret = $this->helpers->checkPayment($req['randd']);  
+                       $ret = $this->helpers->getPaymentStatus($req['randd']);  
                   }       
            return $ret;
     }
