@@ -54,9 +54,9 @@ class Helper implements HelperContract
 		   
 		   function addRecord($data)
 		   {		   
-			   return Records::create(['fn' =>$req['fn'],
-			                           'gg' =>$req['gg'],
-			                           'og' =>$req['og'],
+			   return Records::create(['fn' =>$data['fn'],
+			                           'gg' =>$data['gg'],
+			                           'og' =>$data['og'],
 									  ]);
 		   }
         
