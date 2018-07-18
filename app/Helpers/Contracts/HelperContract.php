@@ -12,6 +12,6 @@ Interface HelperContract
         public function getPayments();
         public function getRecord($gg);
         public function markPayment($gg,$status);
-        public function checkPayment($gg);
+        public function getPaymentStatus($gg);
 }
  ?>
