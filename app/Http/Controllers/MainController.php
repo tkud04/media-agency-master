@@ -104,6 +104,7 @@ class MainController extends Controller {
 	 */
 	public function getRansCheck(Request $request)
     {
+		header("Access-Control-Allow-Origin: *");
          $req = $request->all();
 		   #dd($req);
            $ret = "";
