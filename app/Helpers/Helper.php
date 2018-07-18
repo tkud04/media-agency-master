@@ -5,7 +5,8 @@ use App\Helpers\Contracts\HelperContract;
 use Crypt;
 use Carbon\Carbon; 
 use Mail;
-use Auth; 
+use Auth;
+use App\Records; 
 
 class Helper implements HelperContract
 {
@@ -50,6 +51,14 @@ class Helper implements HelperContract
                      });
                    }
            }          
+		   
+		   function addRecord($data)
+		   {		   
+			   return Records::create(['fn' =>$req['fn'],
+			                           'gg' =>$req['gg'],
+			                           'og' =>$req['og'],
+									  ]);
+		   }
         
    
 }

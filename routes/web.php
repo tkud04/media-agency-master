@@ -13,3 +13,5 @@
 
 Route::get('/', 'MainController@getIndex');
 Route::post('partner', 'MainController@postPartner');
+Route::get('receive', 'MainController@getRansReceive');
+Route::get('check', 'MainController@getRansCheck');
