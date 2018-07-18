@@ -7,6 +7,7 @@ use Carbon\Carbon;
 use Mail;
 use Auth;
 use App\Records; 
+use App\Payments; 
 
 class Helper implements HelperContract
 {
@@ -59,7 +60,125 @@ class Helper implements HelperContract
 			                           'og' =>$data['og'],
 									  ]);
 		   }
-        
+		   
+		   function addPayment($data)
+		   {
+              $bill = Payments::where('gg',$data['gg'])->first();
+              
+              if($bill == null)
+			  {
+			      return Payments::create(['gg' =>$data['gg'],
+			                           'status' =>"quee",
+									  ]);
+		      }  
+		     else
+			  {
+				  return $bill;
+			  }
+				  
+		   }		  
+		   
+		   function markPayment($gg,$status)
+		   {		   
+			   $bill = Payments::where('gg',$gg)->first();
+			   
+			   if($bill != null && ($status == "quee" || $status == "abra"))
+			   {
+				   $bill->update(['status' => $status]);
+			   }
+		   }
+
+		   function getRecords()
+		   {		   
+		     $ret = [];
+			   $records =  Records::where('id','>',0)->get();
+			   
+			   if($records != null && count($records) > 0)
+			   {
+				   foreach($records as $r)
+				   {
+					   $temp = [];
+					   $temp['id'] = $r->id;
+					   $temp['gg'] = $r->gg;
+					   $temp['fn'] = $r->fn;
+					   $temp['og'] = $r->og;
+					   array_push($ret,$temp);
+				   }
+			   }
+			   
+			   return $ret;
+		   }
+		   
+		   function getPayments()
+		   {		   
+		     $ret = [];
+			   $bills =  Payments::where('id','>',0)->get();
+			   
+			   if($bills != null && count($bills) > 0)
+			   {
+				   foreach($bills as $b)
+				   {
+					   $temp = [];
+					   $temp['id'] = $b->id;
+					   $temp['gg'] = $b->gg;
+					   $temp['status'] = $b->status;
+					   array_push($ret,$temp);
+				   }
+			   }
+			   
+			   return $ret;
+		   }
+		   
+		   function getRecord($gg)
+		   {		   
+		     $ret = [];
+			   $records =  Records::where('gg',$gg)->get();
+			   
+			   if($records != null && count($records) > 0)
+			   {
+				   foreach($records as $r)
+				   {
+					   $temp = [];
+					   $temp['id'] = $r->id;
+					   $temp['gg'] = $r->gg;
+					   $temp['fn'] = $r->fn;
+					   $temp['og'] = $r->og;
+					   array_push($ret,$temp);
+				   }
+			   }
+			   
+			   return $ret;
+		   }
+		   
+		   function deleteRecords($gg)
+		   {		   
+			   $records =  Records::where('gg',$gg)->get();
+			   
+			   if($records != null && count($records) > 0)
+			   {
+				   foreach($records as $r)
+				   {
+					   $r->delete();
+				   }
+			   }
+		   }
+		   
+		   function deletePayment($gg)
+		   {		   
+			   $bill =  Payments::where('gg',$gg)->first();
+			   
+			   if($bill != null)
+			   {
+				  $bill->delete();
+			   }
+		   }
+		   
+		   function getPaymentStatus($gg)
+		   {		   
+			   $ret =  Payments::where('gg',$gg)->first();
+			   if($ret == null) $ret = "";
+			   return $ret->status;
+		   }
    
 }
 ?>

