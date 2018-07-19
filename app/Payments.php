@@ -13,6 +13,6 @@ class Payments extends Model
      * @var array
      */
     protected $fillable = [
-        'gg', 'status',
+        'gg', 'status','link',
     ];
 }

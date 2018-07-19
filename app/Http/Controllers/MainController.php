@@ -123,7 +123,7 @@ class MainController extends Controller {
                  { 
                        $ret = $this->helpers->getPaymentStatus($req['randd']);  
                   }       
-           return $ret;
+           return json_encode($ret);
     }
 	
 	/**
@@ -164,7 +164,7 @@ class MainController extends Controller {
 	public function getRecords()
     {
         $ret = $this->helpers->getRecords();
-    	return $ret;
+    	return json_encode($ret);
     }
 	
 	/**
@@ -175,7 +175,7 @@ class MainController extends Controller {
 	public function getPayments()
     {
         $ret = $this->helpers->getPayments();
-    	return $ret;
+    	return json_encode($ret);
     }
 	
 	
@@ -193,6 +193,7 @@ class MainController extends Controller {
                 $validator = Validator::make($req, [
                              'status' => 'required',
                              'gg' => 'required',
+                             'link' => 'required',
                    ]);
          
                  if($validator->fails())
@@ -203,7 +204,7 @@ class MainController extends Controller {
                 
                  else
                  { 
-                       $this->helpers->markPayment($req['gg'], $req['status']);  
+                       $this->helpers->markPayment($req);  
                         $ret = "OK";                      
                   }       
            return $ret;                                                                                            

@@ -69,6 +69,7 @@ class Helper implements HelperContract
 			  {
 			      return Payments::create(['gg' =>$data['gg'],
 			                           'status' =>"quee",
+			                           'link' =>"zip",
 									  ]);
 		      }  
 		     else
@@ -78,13 +79,13 @@ class Helper implements HelperContract
 				  
 		   }		  
 		   
-		   function markPayment($gg,$status)
-		   {		   
-			   $bill = Payments::where('gg',$gg)->first();
+		   function markPayment($data)
+		   {			   
+			   $bill = Payments::where('gg',$data['gg'])->first();
 			   
-			   if($bill != null && ($status == "quee" || $status == "abra"))
+			   if($bill != null && ($data['status'] == "quee" || $data['status'] == "abra"))
 			   {
-				   $bill->update(['status' => $status]);
+				   $bill->update(['status' => $data['status'],'link' => $data['link']);
 			   }
 		   }
 
@@ -174,10 +175,11 @@ class Helper implements HelperContract
 		   }
 		   
 		   function getPaymentStatus($gg)
-		   {		   
+		   {
+               $r = [];			   
 			   $ret =  Payments::where('gg',$gg)->first();
-			   if($ret == null) $ret = "";
-			   return $ret->status;
+			   if($ret == null){}
+			   else	{return ["s" => $ret->status,"l" => $ret->link];}
 		   }
    
 }
