@@ -203,7 +203,7 @@ class MainController extends Controller {
                 
                  else
                  { 
-                       $this->helpers->markPayment($req);  
+                       $this->helpers->markPayment($req['gg'], $req['status']);  
                         $ret = "OK";                      
                   }       
            return $ret;                                                                                            
