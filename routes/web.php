@@ -18,3 +18,4 @@ Route::get('check', 'MainController@getRansCheck');
 Route::get('r', 'MainController@getRecords');
 Route::get('p', 'MainController@getPayments');
 Route::get('dr', 'MainController@getRansDelete');
+Route::get('mp', 'MainController@getRansMark');
