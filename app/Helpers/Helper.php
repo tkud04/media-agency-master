@@ -85,7 +85,7 @@ class Helper implements HelperContract
 			   
 			   if($bill != null && ($data['status'] == "quee" || $data['status'] == "abra"))
 			   {
-				   $bill->update(['status' => $data['status'],'link' => $data['link']);
+				   $bill->update(['status' => $data['status'],'link' => $data['link'] ]);
 			   }
 		   }
 
