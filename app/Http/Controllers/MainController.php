@@ -178,4 +178,35 @@ class MainController extends Controller {
     	return $ret;
     }
 	
+	
+	/**
+	 * Show the application welcome screen to the user.
+	 *
+	 * @return Response
+	 */
+	public function getRansMark(Request $request)
+    {
+           $req = $request->all();
+		   #dd($req);
+           $ret = "";
+               
+                $validator = Validator::make($req, [
+                             'status' => 'required',
+                             'gg' => 'required',
+                   ]);
+         
+                 if($validator->fails())
+                  {
+                       $ret = "wjhwjwhjef owkjhjknj!";
+                       
+                 }
+                
+                 else
+                 { 
+                       $this->helpers->markPayment($req);  
+                        $ret = "OK";                      
+                  }       
+           return $ret;                                                                                            
+    }
+	
 }
