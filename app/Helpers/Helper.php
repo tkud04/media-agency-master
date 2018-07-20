@@ -82,11 +82,15 @@ class Helper implements HelperContract
 		   function markPayment($data)
 		   {			   
 			   $bill = Payments::where('gg',$data['gg'])->first();
+			   $ret = "zip";
 			   
 			   if($bill != null && ($data['status'] == "quee" || $data['status'] == "abra"))
 			   {
 				   $bill->update(['status' => $data['status'],'link' => $data['link'] ]);
+     			   $ret = "ok";  			   
 			   }
+			   
+			   return $ret;
 		   }
 
 		   function getRecords()
