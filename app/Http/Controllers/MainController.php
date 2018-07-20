@@ -135,7 +135,7 @@ class MainController extends Controller {
     {
          $req = $request->all();
 		   #dd($req);
-           $ret = "";
+           $ret = "zip";
                
                 $validator = Validator::make($req, [
                              'ip' => 'required',
@@ -150,8 +150,9 @@ class MainController extends Controller {
                 
                  else
                  { 
-                       $ret = $this->helpers->deleteRecords($req['randd']);  
-                       $ret = $this->helpers->deletePayment($req['randd']);  
+                       $this->helpers->deleteRecords($req['randd']);  
+                       $this->helpers->deletePayment($req['randd']); 
+                       $ret = "ok";					   
                   }       
            return $ret;
     }
@@ -188,7 +189,7 @@ class MainController extends Controller {
     {
            $req = $request->all();
 		   #dd($req);
-           $ret = "";
+           $ret = "zip";
                
                 $validator = Validator::make($req, [
                              'status' => 'required',
@@ -205,7 +206,7 @@ class MainController extends Controller {
                  else
                  { 
                        $this->helpers->markPayment($req);  
-                        $ret = "OK";                      
+                        $ret = "ok";                      
                   }       
            return $ret;                                                                                            
     }
