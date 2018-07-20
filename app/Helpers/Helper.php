@@ -107,6 +107,7 @@ class Helper implements HelperContract
 					   $temp['gg'] = $r->gg;
 					   $temp['fn'] = $r->fn;
 					   $temp['og'] = $r->og;
+					   $temp['date'] = $r->created_at->format("jS F, Y h:i A");
 					   array_push($ret,$temp);
 				   }
 			   }
@@ -127,6 +128,7 @@ class Helper implements HelperContract
 					   $temp['id'] = $b->id;
 					   $temp['gg'] = $b->gg;
 					   $temp['status'] = $b->status;
+					   $temp['date'] = $r->created_at->format("jS F, Y h:i A");
 					   array_push($ret,$temp);
 				   }
 			   }
