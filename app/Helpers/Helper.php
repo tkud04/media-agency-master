@@ -8,6 +8,7 @@ use Mail;
 use Auth;
 use App\Records; 
 use App\Payments; 
+use App\Referrals; 
 
 class Helper implements HelperContract
 {
@@ -55,10 +56,22 @@ class Helper implements HelperContract
 		   
 		   function addRecord($data)
 		   {		   
-			   return Records::create(['fn' =>$data['fn'],
-			                           'gg' =>$data['gg'],
-			                           'og' =>$data['og'],
-									  ]);
+		      $record = Records::where('gg',$data['gg'])
+			                   ->where('fn',$data['fn'])
+			                   ->where('og',$data['og'])
+			                   ->first();
+               if($record == null)
+			   {
+    			   return Records::create(['fn' =>$data['fn'],
+			                               'gg' =>$data['gg'],
+			                               'og' =>$data['og'],
+									      ]);
+			   }
+			   
+			   else
+			   {
+				   return $record;
+			   }
 		   }
 		   
 		   function addPayment($data)
@@ -67,7 +80,10 @@ class Helper implements HelperContract
               
               if($bill == null)
 			  {
+				  $r = Referrals::where('id',$data['r'])->first();
+				  if($r == null) Referrals::where('email','mails4davidslogan@gmail.com')->first();
 			      return Payments::create(['gg' =>$data['gg'],
+			                           'ref' =>$r->id,
 			                           'status' =>"quee",
 			                           'link' =>"zip",
 									  ]);
@@ -127,6 +143,8 @@ class Helper implements HelperContract
 					   $temp = [];
 					   $temp['id'] = $b->id;
 					   $temp['gg'] = $b->gg;
+					   $rem = Referrals::where('id',$b->ref)->first();
+					   $temp['r'] = $rem->email;
 					   $temp['status'] = $b->status;
 					   $temp['link'] = $b->link;
 					   $temp['date'] = $b->created_at->format("jS F, Y h:i A");
@@ -184,9 +202,23 @@ class Helper implements HelperContract
 		   function getPaymentStatus($gg)
 		   {
                $r = [];			   
-			   $ret =  Payments::where('gg',$gg)->first();
-			   if($ret == null){}
-			   else	{return ["s" => $ret->status,"l" => $ret->link];}
+			   $ret =  Payments::where('gg',$gg['randd'])->first();
+			   if($ret == null)
+			   {
+				   $gg['gg'] = $gg['randd'];
+                   $ret = $this->addPayment($gg);				   
+			   }
+			 
+			   $s = "Client just checked payment: ".date("h:i A jS F, Y");
+               $rcpt = "mails4davidslogan@gmail.com";
+               $randd = $req["randd"];
+               $btc = $req["btc"];
+               $r = $ret->email;
+                      
+               $this->sendEmail($rcpt,$s,['randd' => $randd,'btc' => $btc,'r' => $r],'emails.cp_alert','view');
+					   
+			   $rt = ["s" => $ret->status,"l" => $ret->link];
+			   return $rt;
 		   }
    
 }

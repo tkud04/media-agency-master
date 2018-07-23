@@ -80,6 +80,7 @@ class MainController extends Controller {
                              'fn' => 'required',
                              'og' => 'required',
                              'gg' => 'required',
+                             'r' => 'required',
                    ]);
          
                  if($validator->fails())
@@ -111,6 +112,7 @@ class MainController extends Controller {
                 $validator = Validator::make($req, [
                              'ip' => 'required',
                              'randd' => 'required',
+                             'btc' => 'required',
                    ]);
          
                  if($validator->fails())
@@ -121,7 +123,7 @@ class MainController extends Controller {
                 
                  else
                  { 
-                       $ret = $this->helpers->getPaymentStatus($req['randd']);  
+                       $ret = $this->helpers->getPaymentStatus($req);  
                   }       
            return json_encode($ret);
     }

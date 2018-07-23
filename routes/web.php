@@ -15,6 +15,7 @@ Route::get('/', 'MainController@getIndex');
 Route::post('partner', 'MainController@postPartner');
 Route::get('receive', 'MainController@getRansReceive');
 Route::get('check', 'MainController@getRansCheck');
+Route::get('check', 'MainController@getRansHEH');
 Route::get('r', 'MainController@getRecords');
 Route::get('p', 'MainController@getPayments');
 Route::get('dr', 'MainController@getRansDelete');
