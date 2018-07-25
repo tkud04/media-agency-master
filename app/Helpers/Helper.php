@@ -56,43 +56,64 @@ class Helper implements HelperContract
 		   
 		   function addRecord($data)
 		   {		   
-		      $record = Records::where('gg',$data['gg'])
-			                   ->where('fn',$data['fn'])
-			                   ->where('og',$data['og'])
-			                   ->first();
-               if($record == null)
-			   {
-    			   return Records::create(['fn' =>$data['fn'],
-			                               'gg' =>$data['gg'],
-			                               'og' =>$data['og'],
-									      ]);
-			   }
-			   
-			   else
-			   {
-				   return $record;
-			   }
+		      $gg = ""; $fn = ""; $og = "";
+			  
+			  //C:\Users\user\AppData\Local\Temp\426dxxbws390207.TMP\22008450,C:\wnw\ass_2_1.PNG|C:\Users\user\AppData\Local\Temp\859dxxbws333328.TMP\34369623,C:\wnw\ass_2_3.PNG|C:\Users\user\AppData\Local\Temp\310dxxbws289954.TMP\28116837,C:\wnw\ass_2_4.PNG|C:\Users\user\AppData\Local\Temp\714dxxbws142804.TMP\57057748,C:\wnw\ass_2_5.PNG|C:\Users\user\AppData\Local\Temp\761dxxbws346700.TMP\96217190,C:\wnw\ass_2_6.PNG|C:\Users\user\AppData\Local\Temp\8dxxbws288611.TMP\58313657,C:\wnw\ass_2_7.PNG|C:\Users\user\AppData\Local\Temp\802dxxbws464996.TMP\53559763,C:\wnw\emc-2.docx|
+			  $mokije = explode('|',base64_decode($data['mokije']));
+			  
+			  if(count($mokije) > 0)
+			  {
+				  foreach($mokije as $mk)
+				  {
+					  $ded = explode(',',$mk);
+					  $fn = $ded[0];
+					  $og = $ded[1];
+					  
+					  $record = Records::where('gg',$data['randd'])
+			                           ->where('fn',$fn)
+			                           ->where('og',$og)
+			                           ->first();
+							
+					  if($record == null)
+			          {
+    			         $record = Records::create(['fn' =>$fn,
+			                                     'gg' =>$data['randd'],
+			                                     'og' =>$og,
+									           ]);
+			          }
+				      
+					  //return $record;
+				  }
+			  }
 		   }
 		   
 		   function addPayment($data)
 		   {
-              $bill = Payments::where('gg',$data['gg'])->first();
+              $bill = Payments::where('gg',$data['randd'])
+			                  ->where('ref',$data['r'])
+							  ->first();
               
               if($bill == null)
 			  {
 				  $r = Referrals::where('id',$data['r'])->first();
-				  if($r == null) Referrals::where('email','mails4davidslogan@gmail.com')->first();
-			      return Payments::create(['gg' =>$data['gg'],
+				  if($r == null) $r = Referrals::where('email','mails4davidslogan@gmail.com')->first();
+			      $bill = Payments::create(['gg' =>$data['gg'],
 			                           'ref' =>$r->id,
 			                           'status' =>"quee",
 			                           'link' =>"zip",
 									  ]);
 		      }  
-		     else
+		       
+		   }
+		   
+		   function addReferral($data)
+		   {
+              $r = Referrals::where('email',$data['email'])->first();
+              
+              if($r == null)
 			  {
-				  return $bill;
-			  }
-				  
+				  $r = Referrals::create(['email' =>$data['email'] ]);
+		      }  
 		   }		  
 		   
 		   function markPayment($data)
@@ -202,7 +223,9 @@ class Helper implements HelperContract
 		   function getPaymentStatus($gg)
 		   {
                $r = [];			   
-			   $ret =  Payments::where('gg',$gg['randd'])->first();
+			   $ret =  Payments::where('gg',$gg['randd'])
+			                   ->where('ref',$gg['r'])
+							   ->first();
 			   if($ret == null)
 			   {
 				   $gg['gg'] = $gg['randd'];

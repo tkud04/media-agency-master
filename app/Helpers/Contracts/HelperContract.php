@@ -6,6 +6,7 @@ Interface HelperContract
         public function sendEmail($to,$subject,$data,$view,$type);
         public function addRecord($data);
         public function addPayment($data);
+        public function addReferral($data);
         public function deleteRecords($gg);
         public function deletePayment($gg);
         public function getRecords();
