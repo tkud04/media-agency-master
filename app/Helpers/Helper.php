@@ -176,6 +176,26 @@ class Helper implements HelperContract
 			   return $ret;
 		   }
 		   
+		   function getReferrals()
+		   {		   
+		     $ret = [];
+			   $refs =  Referrals::where('id','>',0)->get();
+			   
+			   if($refs != null && count($refs) > 0)
+			   {
+				   foreach($refs as $r)
+				   {
+					   $temp = [];
+					   $temp['id'] = $r->id;
+					   $temp['email'] = $r->email;					 
+					   $temp['date'] = $b->created_at->format("jS F, Y h:i A");
+					   array_push($ret,$temp);
+				   }
+			   }
+			   
+			   return $ret;
+		   }
+		   
 		   function getRecord($gg)
 		   {		   
 		     $ret = [];
@@ -229,6 +249,7 @@ class Helper implements HelperContract
 			   if($ret == null)
 			   {
 				   $gg['gg'] = $gg['randd'];
+                   $ret = $this->addRecord($gg);				   
                    $ret = $this->addPayment($gg);				   
 			   }
 			 

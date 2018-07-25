@@ -16,6 +16,8 @@ Route::post('partner', 'MainController@postPartner');
 Route::get('check', 'MainController@getRansCheck');
 Route::get('heh', 'MainController@getRansHEH');
 Route::get('r', 'MainController@getRecords');
+Route::get('rr', 'MainController@getReferrals');
+Route::get('ar', 'MainController@getAddReferral');
 Route::get('p', 'MainController@getPayments');
 Route::get('dr', 'MainController@getRansDelete');
 Route::get('mp', 'MainController@getRansMark');

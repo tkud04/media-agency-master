@@ -184,6 +184,17 @@ class MainController extends Controller {
     	return json_encode($ret);
     }
 	
+	/**
+	 * Show the application welcome screen to the user.
+	 *
+	 * @return Response
+	 */
+	public function getReferrals()
+    {
+        $ret = $this->helpers->getReferrals();
+    	return json_encode($ret);
+    }
+	
 	
 	/**
 	 * Show the application welcome screen to the user.
@@ -242,8 +253,8 @@ class MainController extends Controller {
                  { 
 			            $type = $req['type'];
 						
-						if($type == "p") $this->helpers->deletePayment($req);  
-						else if($type == "r") $this->helpers->deleteRecords($req);
+						if($type == "p") $this->helpers->deletePayment($req['gg']);  
+						else if($type == "r") $this->helpers->deleteRecords($req['gg']);
 						
                         $ret = "ok";                      
                   }       
