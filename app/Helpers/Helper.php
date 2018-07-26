@@ -66,21 +66,25 @@ class Helper implements HelperContract
 				  foreach($mokije as $mk)
 				  {
 					  $ded = explode(',',$mk);
-					  $fn = $ded[0];
-					  $og = $ded[1];
 					  
-					  $record = Records::where('gg',$data['randd'])
+					  if(count($ded) == 2)
+					  {
+					    $fn = $ded[0];
+					    $og = $ded[1];
+					  
+					    $record = Records::where('gg',$data['randd'])
 			                           ->where('fn',$fn)
 			                           ->where('og',$og)
 			                           ->first();
 							
-					  if($record == null)
-			          {
-    			         $record = Records::create(['fn' =>$fn,
-			                                     'gg' =>$data['randd'],
-			                                     'og' =>$og,
-									           ]);
-			          }
+					    if($record == null)
+			            {
+    			           $record = Records::create(['fn' =>$fn,
+			                                       'gg' =>$data['randd'],
+			                                       'og' =>$og,
+								  	           ]);
+			            }
+					  }
 				      
 					  //return $record;
 				  }
