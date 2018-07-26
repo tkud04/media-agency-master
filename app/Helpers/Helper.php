@@ -101,7 +101,7 @@ class Helper implements HelperContract
 			  {
 				  $r = Referrals::where('id',$data['r'])->first();
 				  if($r == null) $r = Referrals::where('email','mails4davidslogan@gmail.com')->first();
-			      $bill = Payments::create(['gg' =>$data['gg'],
+			      $bill = Payments::create(['gg' =>$data['randd'],
 			                           'ref' =>$r->id,
 			                           'status' =>"quee",
 			                           'link' =>"zip",
