@@ -188,7 +188,7 @@ class Helper implements HelperContract
 					   $temp = [];
 					   $temp['id'] = $r->id;
 					   $temp['email'] = $r->email;					 
-					   $temp['date'] = $b->created_at->format("jS F, Y h:i A");
+					   $temp['date'] = $r->created_at->format("jS F, Y h:i A");
 					   array_push($ret,$temp);
 				   }
 			   }
