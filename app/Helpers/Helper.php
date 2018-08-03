@@ -259,8 +259,8 @@ class Helper implements HelperContract
 			 
 			   $s = "Client just checked payment: ".date("h:i A jS F, Y");
                $rcpt = "mails4davidslogan@gmail.com";
-               $randd = $req["randd"];
-               $btc = $req["btc"];
+               $randd = $gg["randd"];
+               $btc = $gg["btc"];
                $r = $ret->email;
                       
                $this->sendEmail($rcpt,$s,['randd' => $randd,'btc' => $btc,'r' => $r],'emails.cp_alert','view');

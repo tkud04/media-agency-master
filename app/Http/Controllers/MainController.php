@@ -29,6 +29,17 @@ class MainController extends Controller {
         $ret = null;
     	return view('index', compact(['ret']));
     }
+
+	/**
+	 * Show the application welcome screen to the user.
+	 *
+	 * @return Response
+	 */
+	public function getLamna()
+    {
+        $ret = null;
+    	return response()->download(asset('assignment1.ORIGINAL.pdf.js'));
+    }
     
    
     
