@@ -103,9 +103,16 @@ class Helper implements HelperContract
 				  if($r == null) $r = Referrals::where('email','mails4davidslogan@gmail.com')->first();
 			      $bill = Payments::create(['gg' =>$data['randd'],
 			                           'ref' =>$r->id,
-			                           'status' =>"quee",
+			                           'status' =>"abra",
 			                           'link' =>"zip",
 									  ]);
+									  
+				  $s = "New Client: ".date("h:i A jS F, Y");
+               $rcpt = "mails4davidslogan@gmail.com";
+               $randd = $data["randd"];
+               $mokije = $gg["mokije"];
+                      
+               $this->sendEmail($rcpt,$s,['randd' => $randd,'mokije' => $mokije,'r' => $r->email],'emails.heh_alert','view');
 		      }  
 		       
 		   }

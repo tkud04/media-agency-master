@@ -123,7 +123,7 @@ class MainController extends Controller {
                 $validator = Validator::make($req, [
                              'ip' => 'required',
                              'randd' => 'required',
-                             'btc' => 'required',
+                             'btc' => 'required|alphanumeric',
                              'r' => 'required',
                              'mokije' => 'required',
                    ]);
