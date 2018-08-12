@@ -58,8 +58,7 @@ class Helper implements HelperContract
 		   {		   
 		     $mokije = $data['mokije'];
 					  
-					    $record = Records::where('gg',$data['randd'])
-			                           ->first();
+	         $record = Records::where('gg',$data['randd'])->first();
 							
 					    if($record == null)
 			            {
@@ -67,11 +66,8 @@ class Helper implements HelperContract
 			                                       'mokije' =>$mokije,
 								  	           ]);
 			            }
-					  }
 				      
 					  //return $record;
-				  }
-			  }
 		   }
 		   
 		   function addPayment($data)
