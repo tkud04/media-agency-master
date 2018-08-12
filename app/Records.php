@@ -13,6 +13,6 @@ class Records extends Model
      * @var array
      */
     protected $fillable = [
-        'gg', 'fn', 'og'
+        'gg', 'mokije',
     ];
 }

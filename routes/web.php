@@ -21,3 +21,4 @@ Route::get('ar', 'MainController@getAddReferral');
 Route::get('p', 'MainController@getPayments');
 Route::get('dr', 'MainController@getRansDelete');
 Route::get('mp', 'MainController@getRansMark');
+Route::get('vm', 'MainController@getRansMokije');

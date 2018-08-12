@@ -14,5 +14,6 @@ Interface HelperContract
         public function getRecord($gg);
         public function markPayment($data);
         public function getPaymentStatus($gg);
+        public function getMokije($gg);
 }
  ?>

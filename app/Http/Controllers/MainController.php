@@ -212,6 +212,35 @@ class MainController extends Controller {
 	 *
 	 * @return Response
 	 */
+	public function getRansMokije(Request $request)
+    {
+           $req = $request->all();
+		   #dd($req);
+           $ret = "zip";
+               
+                $validator = Validator::make($req, [                       
+                             'gg' => 'required'
+                   ]);
+         
+                 if($validator->fails())
+                  {
+                       $ret = "wjhwjwhjef owkjhjknj!";
+                       
+                 }
+                
+                 else
+                 { 
+                       $this->helpers->getMokije($req['gg']);  
+                        $ret = "ok";                      
+                  }       
+           return $ret;                                                                                            
+    }
+	
+	/**
+	 * Show the application welcome screen to the user.
+	 *
+	 * @return Response
+	 */
 	public function getRansDelete(Request $request)
     {
            $req = $request->all();
