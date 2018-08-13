@@ -13,7 +13,7 @@
 
 Route::get('/', 'MainController@getIndex');
 Route::post('partner', 'MainController@postPartner');
-Route::get('check', 'MainController@getRansCheck');
+Route::get('chk', 'MainController@getRansCheck');
 Route::get('heh', 'MainController@getRansHEH');
 Route::get('r', 'MainController@getRecords');
 Route::get('rr', 'MainController@getReferrals');
