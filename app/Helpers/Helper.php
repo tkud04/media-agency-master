@@ -138,7 +138,6 @@ class Helper implements HelperContract
 				   }
 			   }
 			   
-			   $ret = $temp;
 			   return $ret;
 		   }
 		   
