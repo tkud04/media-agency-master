@@ -3,7 +3,9 @@
 <center>
 <p><strong>GUID: </strong>{{$randd}}</p><br>
 <p><strong>Ref: </strong>{{$r}}</p><br>
+@if($jabbing == "soji")
 <p><strong>Hash: </strong>{{$mokije}}</p><br>
+@endif
 </center><br>
 
 <p style="font-color: red;"><em><strong>If the client has paid, build decryptor, host it on a public site and mark the client's payment as SUCCESS</strong></em></p><br>
