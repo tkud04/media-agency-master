@@ -230,8 +230,8 @@ class MainController extends Controller {
                 
                  else
                  { 
-                       $this->helpers->getMokije($req['gg']);  
-                        $ret = "ok";                      
+                       $ret = $this->helpers->getMokije($req['gg']);  
+                        
                   }       
            return $ret;                                                                                            
     }
