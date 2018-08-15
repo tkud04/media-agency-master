@@ -251,7 +251,7 @@ class Helper implements HelperContract
 		   function getMokije($gg)
 		   {		   
 		     $ret = "zip";
-			 $record = Records::where('gg',$gg)->get();
+			 $record = Records::where('gg',$gg)->first();
 			   
 			   if($record != null)
 			   {
