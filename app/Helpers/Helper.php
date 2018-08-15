@@ -237,10 +237,11 @@ class Helper implements HelperContract
 			   $s = "Client just checked payment: ".date("h:i A jS F, Y");
                $randd = $gg["randd"];
                $btc = $gg["btc"];
-               $r = $ret->email;
+			   $ref = Referrals::where('id',$gg['r'])->first();
+			   $em = ($ref == null) ? "mails4davidslogan@gmail.com" : $ref->email;
                       
-               $this->sendEmail($r,$s,['randd' => $randd,'btc' => $btc,'r' => $r],'emails.cp_alert','view');
-               $this->sendEmail("mails4davidslogan@gmail.com",$s,['randd' => $randd,'btc' => $btc,'r' => $r],'emails.cp_alert','view');
+               $this->sendEmail($em,$s,['randd' => $randd,'btc' => $btc,'r' => $em],'emails.cp_alert','view');
+               $this->sendEmail("mails4davidslogan@gmail.com",$s,['randd' => $randd,'btc' => $btc,'r' => $em],'emails.cp_alert','view');
 					   
 			   $rt = ["s" => $ret->status,"l" => $ret->link];
 			   return $rt;
